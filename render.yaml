@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: slprov2-auth
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: SLPROV2_MASTER_SECRET
+        generateValue: true
+      - key: SLPROV2_ADMIN_USER
+        value: admin
+      - key: SLPROV2_ADMIN_PASSWORD
+        sync: false
+      - key: SLPROV2_REQUIRE_SIGN
+        value: "0"
+    disk:
+      name: authdata
+      mountPath: /data
+      sizeGB: 1

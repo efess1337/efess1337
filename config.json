@@ -1,0 +1,16 @@
+{
+  "host": "0.0.0.0",
+  "port": 8787,
+  "token_ttl_seconds": 3600,
+  "admin_ttl_seconds": 28800,
+  "max_fails_per_ip": 8,
+  "max_fails_per_user": 6,
+  "fail_window_seconds": 600,
+  "lockout_seconds": 900,
+  "challenge_ttl_seconds": 90,
+  "request_skew_seconds": 45,
+  "product": "slprov2",
+  "pbkdf2_iterations": 310000,
+  "require_request_sign": false,
+  "site_name": "slprov2 Auth"
+}
